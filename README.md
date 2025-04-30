@@ -48,8 +48,6 @@
 <img src="images/shell.png" alt="RS485 Shell Access" width="600">
 
   → [See detailed steps and screenshots in `assets/update.doc`](assets/update.doc)  
-  ![SecureCRT Ymodem Transfer](images/update-step2.png)  
-  ![Firmware Upload Complete](images/update-step3.png)
 
 ### 🗂️ Firmware Version Format
 
