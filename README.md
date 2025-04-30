@@ -29,6 +29,10 @@
   - `http://www.hamedata.com/app/download/neng/HM_HIE_FC41D_remote_ota.rbl`  
     → [See `assets/HM_HIE_FC41D_remote_ota.rbl`](assets/HM_HIE_FC41D_remote_ota.rbl)
 
+  -	For more technical details about the Quectel FC41D chipset used in this device, see:  
+	[assets/Quectel_FC41D_AT_Commands-Manual_V1.0.0_Preliminary_20210825.pdf](assets/Quectel_FC41D_AT_Commands-Manual_V1.0.0_Preliminary_20210825.pdf)
+	
+
 ### 🔌 RS485 Interface
 
 - The Venus E includes an **RS485 port** that supports the **Modbus protocol**.  
