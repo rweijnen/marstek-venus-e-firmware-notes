@@ -206,6 +206,8 @@ openssl rsa -in privkey.key -noout -modulus | openssl md5
 MD5(stdin)= 397fe7a0488b67e4012cd1a09d658c8b
 ```
 
+
+
 🧠 What this might mean in practice
 1. The firmware may include credentials for AWS IoT
 
@@ -230,6 +232,30 @@ If the key pair is active and tied to a currently reachable endpoint, it might a
 ✅ If the endpoint is still online and lacks additional protections, this key pair could potentially be used for local testing or backend exploration.
 
     ⚠️ Important: These are theoretical implications. No actual endpoint has been tested, and access has not been attempted. This analysis is strictly for educational and research purposes.
+
+🌐 Suspected AWS IoT Endpoint
+
+Firmware analysis suggests that the device communicates with an AWS IoT Core endpoint:
+
+`a40nr6osvmmaw-ats.iot.eu-central-1.amazonaws.com`
+
+This follows the standard AWS IoT endpoint pattern:
+
+<client-id>-ats.iot.<region>.amazonaws.com
+
+    The -ats suffix indicates it's using Amazon Trust Services (ATS) Root CAs.
+
+    The region eu-central-1 corresponds to Frankfurt, which aligns with EU deployments.
+
+    This endpoint is likely used for:
+
+        Publishing telemetry data (e.g., battery status)
+
+        Receiving cloud commands or OTA updates
+
+        Device authentication using mutual TLS (mTLS) via a certificate-key pair found in the firmware
+
+    ⚠️ No traffic has been captured or endpoint access verified. This assumption is based solely on static firmware strings and certificate analysis.
 
 ## 🧠 Reverse Engineering Artifacts
 
