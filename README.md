@@ -41,7 +41,7 @@
   4. Sending `C` characters to enter Ymodem transfer mode.
   5. Drag-and-dropping the firmware file for upload.
 
-<img src="assets/shell.png" alt="RS485 Shell Access" width="600">
+<img src="images/shell.png" alt="RS485 Shell Access" width="600">
 
   → [See detailed steps and screenshots in `assets/update.doc`](assets/update.doc)  
   ![SecureCRT Ymodem Transfer](images/update-step2.png)  
