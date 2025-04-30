@@ -27,7 +27,7 @@
 - The device uses a **Quectel FC41D** Wi-Fi/Bluetooth chipset. This is confirmed by multiple firmware references and OTA links:
   - `AT+QWLANOTA=http://192.168.137.1/FC41D_OTA.rbl`
   - `http://www.hamedata.com/app/download/neng/HM_HIE_FC41D_remote_ota.rbl`  
-    → [See `assets/HM_HIE_FC41D_remote_ota.rbl`](assets/HM_HIE_FC41D_remote_ota.rbl)
+    → [See `firmware/HM_HIE_FC41D_remote_ota.rbl`](firmware/HM_HIE_FC41D_remote_ota.rbl)
 
   -	For more technical details about the Quectel FC41D chipset used in this device, see:  
 	[assets/Quectel_FC41D_AT_Commands-Manual_V1.0.0_Preliminary_20210825.pdf](assets/Quectel_FC41D_AT_Commands-Manual_V1.0.0_Preliminary_20210825.pdf)
