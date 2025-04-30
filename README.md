@@ -236,9 +236,11 @@ Decompiled output from Hex-Rays and other tools is stored in the [`reverse/`](re
 This project is licensed under the Mozilla Public License 2.0 (MPL-2.0).
 You may use, modify, and redistribute this code and documentation under the terms of the MPL. Modifications to MPL-covered files must remain open and be shared under the same license.
 See LICENSE for the full text.
+
 🤝 Contributing
 
 Pull requests with additional findings, cleaner extraction techniques, or hardware insights are welcome. If you have access to a similar Marstek model, comparing firmware versions or board revisions could help build a broader picture.
+
 ⚠️ Disclaimer
 
 This repository is provided for educational and research purposes only. Reverse engineering and firmware extraction may violate terms of service or warranty agreements. Use responsibly and ensure compliance with local laws.
