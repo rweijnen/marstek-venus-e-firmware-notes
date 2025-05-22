@@ -6,8 +6,8 @@
 # CT MAC, and CT type, with a custom XOR-based checksum appended.
 #
 # Device types supported:
-#   - Device type: HMG-50 (required)
-#   - CT type    : HME-4  (required)
+#   - Device type: HMG-50 (5.12kWh battery)
+#   - CT type    : HME-4 (CT002) or HME-3 (CT003)
 #
 # MAC addresses:
 #   - battery_mac and ct_mac must be provided as 12-character hex strings.
@@ -46,8 +46,8 @@ def calculate_checksum(data_bytes):
 def GetCTData(ip, device_type, battery_mac, ct_mac, ct_type):
     if device_type != 'HMG-50':
         raise ValueError("Only 'HMG-50' is supported as device_type")
-    if ct_type != 'HME-4':
-        raise ValueError("Only 'HME-4' is supported as ct_type")
+    if ct_type not in ('HME-4', 'HME-3'):
+        raise ValueError("CT type must be either 'HME-4' or 'HME-3'")
     if not validate_mac(battery_mac):
         raise ValueError("Battery MAC must be 12 hex characters")
     if not validate_mac(ct_mac):
@@ -86,7 +86,7 @@ def GetCTData(ip, device_type, battery_mac, ct_mac, ct_type):
 
     # Send UDP
     sock = socket.socket(socket.AF_INET, socket.SOCK_DGRAM)
-    sock.settimeout(5.0)
+    sock.settimeout(1.0)
     sock.sendto(payload, (ip, 12345))
 
     try:
@@ -102,7 +102,7 @@ if __name__ == "__main__":
     GetCTData(
         ip="192.168.20.78",
         device_type="HMG-50",
-        battery_mac="242XXXXXXXX",  # MT Battery Mac, get from Marstek App -> Device Management
-        ct_mac="009cXXXXXXXX",      # MT CT002 Mac, get from Marstek App -> Device Management
+        battery_mac="24215ee5829d",  # MT Battery Mac, get from Marstek App -> Device Management
+        ct_mac="009c17c24819",       # MT CT002 Mac, get from Marstek App -> Device Management
         ct_type="HME-4"
     )
