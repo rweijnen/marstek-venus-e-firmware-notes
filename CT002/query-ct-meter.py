@@ -247,7 +247,7 @@ if __name__ == "__main__":
     send_ct_query(
         ip="192.168.20.78",
         device_type="HMG-50",
-        battery_mac="24215ee5829d",  # MT Battery Mac, get from Marstek App -> Device Management
-        ct_mac="009c17c24819",       # MT CT Mac, get from Marstek App -> Device Management
+        battery_mac="24215XXXXXX",  # MT Battery Mac, get from Marstek App -> Device Management
+        ct_mac="009c17XXXXX",       # MT CT Mac, get from Marstek App -> Device Management
         ct_type="HME-4"
     )
