@@ -16,7 +16,7 @@ TIMEOUT = 0.3
 def print_header():
     print("# -----------------------------------------------------------------------------")
     print("# Marstek CT Discovery script by Remko Weijnen")
-    print("# <github url to be inserted later>")
+    print("# https://github.com/rweijnen/marstek-venus-e-firmware-notes/tree/main/CT002")
     print("#")
     print("# This script attempts to discover a Marstek CT meter in the network by")
     print("# simulating a Marstek Battery meter query to the CT on UDP port 12345.")
