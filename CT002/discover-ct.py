@@ -171,7 +171,6 @@ def main():
         print("Invalid MAC format.")
         return
     payload = build_ct_payload(ct_mac, ct_type)
-    print_header()
     print(f"Scanning subnet {subnet} for {ct_type_input}...")
     for ip in net.hosts():
         print(f"\rChecking {ip}...", end='', flush=True)
